@@ -3,13 +3,11 @@ package ru.idcore;
 public class MyThread extends Thread {
     @Override
     public void run() {
-        int i = 0;
         String threadName = Thread.currentThread().getName();
         System.out.printf("%s стартовал...\n", threadName);
         try {
             while (!isInterrupted()) {
-                System.out.printf("%s: Сообщение %d\n", threadName, i);
-                i++;
+                System.out.printf("%s: сообщение...\n", threadName);
                 Thread.sleep(2000);
             }
 
